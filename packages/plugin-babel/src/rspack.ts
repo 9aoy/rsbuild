@@ -7,7 +7,7 @@ import {
   SharedRsbuildPluginAPI,
   SharedNormalizedConfig,
 } from '@rsbuild/shared';
-import { cloneDeep, isEqual } from 'lodash';
+import { cloneDeep } from 'lodash';
 import { PluginBabelOptions } from './type';
 
 /**

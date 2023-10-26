@@ -4,11 +4,19 @@ import {
   mergeChainedOptions,
   applyScriptCondition,
   getBrowserslistWithDefault,
+  SharedNormalizedConfig,
 } from '@rsbuild/shared';
 import _ from 'lodash';
 import { getBabelConfigForWeb } from '@rsbuild/babel-preset/web';
-import { getUseBuiltIns } from './babel';
 import type { RsbuildPlugin } from '../types';
+
+export const getUseBuiltIns = (config: SharedNormalizedConfig) => {
+  const { polyfill } = config.output;
+  if (polyfill === 'ua' || polyfill === 'off') {
+    return false;
+  }
+  return polyfill;
+};
 
 export const pluginTsLoader = (): RsbuildPlugin => {
   return {
@@ -80,7 +88,7 @@ export const pluginTsLoader = (): RsbuildPlugin => {
           rule
             .test(TS_REGEX)
             .use(CHAIN_ID.USE.BABEL)
-            .loader(getCompiledPath('babel-loader'))
+            .loader(require.resolve('babel-loader'))
             .options(babelLoaderOptions)
             .end()
             .use(CHAIN_ID.USE.TS)
