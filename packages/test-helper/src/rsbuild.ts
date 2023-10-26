@@ -84,6 +84,7 @@ export async function createStubRsbuild<
 }: CreateRsbuildOptions & {
   rsbuildConfig?: T;
   provider?: P;
+  /** only apply specified plugins */
   plugins?: RsbuildPlugin[];
 }): Promise<
   Pick<
