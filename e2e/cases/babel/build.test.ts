@@ -11,8 +11,7 @@ test('babel', async ({ page }) => {
     },
     runServer: true,
     plugins: [
-      // TODO type ???
-      pluginBabel((_: any, { addPlugins }: any) => {
+      pluginBabel((_, { addPlugins }) => {
         addPlugins([require('./plugins/myBabelPlugin')]);
       }),
     ],
