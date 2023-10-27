@@ -3,6 +3,7 @@ import { pluginStyledComponents } from '../src';
 import { createStubRsbuild } from '@rsbuild/test-helper';
 import { mergeRegex, JS_REGEX, TS_REGEX } from '@rsbuild/shared';
 import { webpackProvider } from '@rsbuild/webpack';
+import { pluginBabel } from '@rsbuild/plugin-babel';
 import { pluginSwc } from '@rsbuild/plugin-swc';
 
 describe('plugins/styled-components', () => {
@@ -46,7 +47,7 @@ describe('plugins/styled-components', () => {
       provider: webpackProvider,
     });
 
-    rsbuild.addPlugins([pluginStyledComponents()]);
+    rsbuild.addPlugins([pluginBabel(), pluginStyledComponents()]);
     const config = await rsbuild.unwrapConfig();
 
     expect(

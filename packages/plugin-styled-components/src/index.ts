@@ -27,6 +27,8 @@ export const pluginStyledComponents = (
 ): DefaultRsbuildPlugin => ({
   name: 'plugin-styled-components',
 
+  pre: ['plugin-swc', 'plugin-babel'],
+
   setup(api) {
     api.modifyBundlerChain(async (chain, { CHAIN_ID, isProd, target }) => {
       const { bundlerType } = api.context;

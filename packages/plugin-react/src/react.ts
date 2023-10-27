@@ -54,48 +54,54 @@ const applyRspack = (api: SharedRsbuildPluginAPI) => {
 };
 
 const applyWebpack = (api: SharedRsbuildPluginAPI) => {
-  api.modifyRsbuildConfig(async (config, { mergeRsbuildConfig }) => {
-    const babelConfig: RsbuildConfig = {
-      tools: {
-        babel(_, { addPresets, addPlugins }) {
-          const isNewJsx = isBeyondReact17(api.context.rootPath);
-          const presetReactOptions = {
-            development: !isProd(),
-            // Will use the native built-in instead of trying to polyfill
-            useBuiltIns: true,
-            useSpread: false,
-            runtime: isNewJsx ? 'automatic' : 'classic',
-          };
-
-          addPresets([
-            [require.resolve('@babel/preset-react'), presetReactOptions],
-          ]);
-
-          if (isProd()) {
-            addPlugins([
-              [
-                require.resolve(
-                  'babel-plugin-transform-react-remove-prop-types',
-                ),
-                { removeImport: true },
-              ],
-            ]);
-          }
-        },
-      },
-    };
-
-    return mergeRsbuildConfig(babelConfig, config);
-  });
-
   (api as RsbuildPluginAPI).modifyWebpackChain(async (chain, utils) => {
     const config = (api as RsbuildPluginAPI).getNormalizedConfig();
+    const { CHAIN_ID } = utils;
+
+    const isNewJsx = isBeyondReact17(api.context.rootPath);
+    const presetReactOptions = {
+      development: !isProd(),
+      // Will use the native built-in instead of trying to polyfill
+      useBuiltIns: true,
+      useSpread: false,
+      runtime: isNewJsx ? 'automatic' : 'classic',
+    };
+
+    [CHAIN_ID.RULE.JS, CHAIN_ID.RULE.JS_DATA_URI].forEach((ruleId) => {
+      if (chain.module.rules.has(ruleId)) {
+        const rule = chain.module.rule(ruleId);
+
+        if (rule.uses.has(CHAIN_ID.USE.BABEL)) {
+          // add babel preset
+          rule.use(CHAIN_ID.USE.BABEL).tap((babelConfig) => {
+            babelConfig.presets ??= [];
+            babelConfig.presets.push([
+              require.resolve('@babel/preset-react'),
+              presetReactOptions,
+            ]);
+
+            if (isProd()) {
+              babelConfig.plugins ??= [];
+              babelConfig.plugins.push([
+                [
+                  require.resolve(
+                    'babel-plugin-transform-react-remove-prop-types',
+                  ),
+                  { removeImport: true },
+                ],
+              ]);
+            }
+
+            return babelConfig;
+          });
+        }
+      }
+    });
 
     if (!isUsingHMR(config, utils)) {
       return;
     }
 
-    const { CHAIN_ID } = utils;
     const { default: ReactFastRefreshPlugin } = await import(
       '@pmmmwh/react-refresh-webpack-plugin'
     );

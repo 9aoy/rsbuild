@@ -5,6 +5,7 @@ import {
   TS_REGEX,
   mergeRegex,
   DEFAULT_BROWSERSLIST,
+  applyScriptCondition,
 } from '@rsbuild/shared';
 import type { PluginSwcOptions, TransformConfig } from './types';
 import {
@@ -43,7 +44,19 @@ export const pluginSwc = (options: PluginSwcOptions = {}): RsbuildPlugin => ({
         rootPath,
       );
 
-      chain.module.rule(CHAIN_ID.RULE.JS).uses.delete(CHAIN_ID.USE.BABEL);
+      if (chain.module.rule(CHAIN_ID.RULE.JS).uses.has(CHAIN_ID.USE.BABEL)) {
+        chain.module.rule(CHAIN_ID.RULE.JS).uses.delete(CHAIN_ID.USE.BABEL);
+      } else {
+        // init rule include & exclude
+        applyScriptCondition({
+          rule: chain.module.rule(CHAIN_ID.RULE.JS),
+          config: rsbuildConfig,
+          context: api.context,
+          includes: [],
+          excludes: [],
+        });
+      }
+
       chain.module.delete(CHAIN_ID.RULE.TS);
 
       const TJS_REGEX = mergeRegex(JS_REGEX, TS_REGEX);

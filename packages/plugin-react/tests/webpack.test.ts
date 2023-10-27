@@ -1,7 +1,7 @@
 import { expect, describe, it } from 'vitest';
 import { pluginReact } from '../src';
 import { webpackProvider } from '@rsbuild/webpack';
-import { pluginBabel } from '@rsbuild/webpack/plugin-babel';
+import { pluginBabel } from '@rsbuild/plugin-babel';
 import { createStubRsbuild } from '@rsbuild/test-helper';
 
 describe('plugins/react', () => {
@@ -25,7 +25,7 @@ describe('plugins/react', () => {
         },
       },
     });
-    rsbuild.addPlugins([pluginReact()]);
+    rsbuild.addPlugins([pluginBabel(), pluginReact()]);
     const config = await rsbuild.unwrapConfig();
 
     expect(config).toMatchSnapshot();

@@ -24,17 +24,10 @@
     "./plugin-css": {
       "types": "./dist/plugins/css.d.ts",
       "default": "./dist/plugins/css.js"
-    },
-    "./plugin-babel": {
-      "types": "./dist/plugins/babel.d.ts",
-      "default": "./dist/plugins/babel.js"
     }
   },
   "typesVersions": {
     "*": {
-      "plugin-babel": [
-        "./dist/plugins/babel.d.ts"
-      ],
       "plugin-css": [
         "./dist/plugins/css.d.ts"
       ]

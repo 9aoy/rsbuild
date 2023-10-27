@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@rsbuild/core": "workspace:*",
+    "@rsbuild/plugin-babel": "workspace:*",
     "@rsbuild/plugin-swc": "workspace:*",
     "@rsbuild/test-helper": "workspace:*",
     "@rsbuild/webpack": "workspace:*",

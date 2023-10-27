@@ -18,7 +18,7 @@ exports[`plugin-vue-jsx > should allow to configure jsx babel plugin options 1`]
         "test": /\\\\\\.\\(js\\|mjs\\|cjs\\|jsx\\)\\$\\|\\\\\\.\\(ts\\|mts\\|cts\\|tsx\\)\\$/,
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -47,7 +47,7 @@ exports[`plugin-vue-jsx > should allow to configure jsx babel plugin options 1`]
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
                 [
@@ -103,7 +103,7 @@ exports[`plugin-vue-jsx > should allow to configure jsx babel plugin options 1`]
         },
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -132,7 +132,7 @@ exports[`plugin-vue-jsx > should allow to configure jsx babel plugin options 1`]
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
                 [
@@ -202,7 +202,7 @@ exports[`plugin-vue-jsx > should apply jsx babel plugin correctly 1`] = `
         "test": /\\\\\\.\\(js\\|mjs\\|cjs\\|jsx\\)\\$\\|\\\\\\.\\(ts\\|mts\\|cts\\|tsx\\)\\$/,
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -231,7 +231,7 @@ exports[`plugin-vue-jsx > should apply jsx babel plugin correctly 1`] = `
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
                 [
@@ -285,7 +285,7 @@ exports[`plugin-vue-jsx > should apply jsx babel plugin correctly 1`] = `
         },
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -314,7 +314,7 @@ exports[`plugin-vue-jsx > should apply jsx babel plugin correctly 1`] = `
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
                 [

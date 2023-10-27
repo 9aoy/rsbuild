@@ -701,6 +701,9 @@ importers:
       '@rsbuild/core':
         specifier: workspace:*
         version: link:../core
+      '@rsbuild/plugin-babel':
+        specifier: workspace:*
+        version: link:../plugin-babel
       '@rsbuild/test-helper':
         specifier: workspace:*
         version: link:../test-helper
@@ -751,6 +754,9 @@ importers:
       '@rsbuild/core':
         specifier: workspace:*
         version: link:../core
+      '@rsbuild/plugin-babel':
+        specifier: workspace:*
+        version: link:../plugin-babel
       '@rsbuild/plugin-swc':
         specifier: workspace:*
         version: link:../plugin-swc
@@ -853,6 +859,9 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
     devDependencies:
+      '@rsbuild/plugin-babel':
+        specifier: workspace:*
+        version: link:../plugin-babel
       '@rsbuild/webpack':
         specifier: workspace:*
         version: link:../webpack
@@ -941,6 +950,9 @@ importers:
       '@rsbuild/core':
         specifier: workspace:*
         version: link:../core
+      '@rsbuild/plugin-babel':
+        specifier: workspace:*
+        version: link:../plugin-babel
       '@rsbuild/test-helper':
         specifier: workspace:*
         version: link:../test-helper
@@ -988,6 +1000,9 @@ importers:
       '@rsbuild/core':
         specifier: workspace:*
         version: link:../core
+      '@rsbuild/plugin-babel':
+        specifier: workspace:*
+        version: link:../plugin-babel
       '@rsbuild/test-helper':
         specifier: workspace:*
         version: link:../test-helper
@@ -1160,6 +1175,9 @@ importers:
       '@rsbuild/shared':
         specifier: workspace:*
         version: link:../shared
+      babel-loader:
+        specifier: 9.1.3
+        version: 9.1.3(@babel/core@7.23.2)(webpack@5.89.0)
       babel-plugin-import:
         specifier: 1.13.5
         version: 1.13.5

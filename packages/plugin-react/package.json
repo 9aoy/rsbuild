@@ -34,6 +34,7 @@
     "@rsbuild/core": "workspace:*",
     "@rsbuild/test-helper": "workspace:*",
     "@rsbuild/webpack": "workspace:*",
+    "@rsbuild/plugin-babel": "workspace:*",
     "@types/node": "^16",
     "typescript": "^5"
   },

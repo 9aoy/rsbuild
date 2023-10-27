@@ -59,7 +59,10 @@ export const pluginResolve = (): RsbuildPlugin => ({
       const config = api.getNormalizedConfig();
       const isTsProject = Boolean(api.context.tsconfigPath);
 
-      if (config.source.compileJsDataURI) {
+      if (
+        config.source.compileJsDataURI &&
+        chain.module.rules.has(CHAIN_ID.RULE.JS_DATA_URI)
+      ) {
         chain.module
           .rule(CHAIN_ID.RULE.JS_DATA_URI)
           .resolve.set('fullySpecified', false);

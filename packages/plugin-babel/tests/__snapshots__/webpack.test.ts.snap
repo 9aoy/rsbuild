@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`plugin-babel > should add core-js-entry when output.polyfill is entry 1`] = `
+exports[`plugin-babel webpack mode > should add core-js-entry when output.polyfill is entry 1`] = `
 {
   "main": [
     "/datatext/javascript,import \\"core-js\\";",
@@ -9,7 +9,7 @@ exports[`plugin-babel > should add core-js-entry when output.polyfill is entry 1
 }
 `;
 
-exports[`plugin-babel > should add rule to compile Data URI when enable source.compileJsDataURI 1`] = `
+exports[`plugin-babel webpack mode > should add rule to compile Data URI when enable source.compileJsDataURI 1`] = `
 {
   "module": {
     "rules": [
@@ -27,7 +27,7 @@ exports[`plugin-babel > should add rule to compile Data URI when enable source.c
         "test": /\\\\\\.\\(js\\|mjs\\|cjs\\|jsx\\)\\$\\|\\\\\\.\\(ts\\|mts\\|cts\\|tsx\\)\\$/,
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -56,7 +56,7 @@ exports[`plugin-babel > should add rule to compile Data URI when enable source.c
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
               ],
@@ -106,7 +106,7 @@ exports[`plugin-babel > should add rule to compile Data URI when enable source.c
         },
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -135,7 +135,7 @@ exports[`plugin-babel > should add rule to compile Data URI when enable source.c
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
               ],
@@ -181,7 +181,7 @@ exports[`plugin-babel > should add rule to compile Data URI when enable source.c
 }
 `;
 
-exports[`plugin-babel > should adjust browserslist when target is node 1`] = `
+exports[`plugin-babel webpack mode > should adjust browserslist when target is node 1`] = `
 {
   "module": {
     "rules": [
@@ -199,7 +199,7 @@ exports[`plugin-babel > should adjust browserslist when target is node 1`] = `
         "test": /\\\\\\.\\(js\\|mjs\\|cjs\\|jsx\\)\\$\\|\\\\\\.\\(ts\\|mts\\|cts\\|tsx\\)\\$/,
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -221,7 +221,7 @@ exports[`plugin-babel > should adjust browserslist when target is node 1`] = `
                 ],
                 "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-dynamic-import-node/lib/index.js",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
               ],
@@ -262,7 +262,7 @@ exports[`plugin-babel > should adjust browserslist when target is node 1`] = `
         },
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -284,7 +284,7 @@ exports[`plugin-babel > should adjust browserslist when target is node 1`] = `
                 ],
                 "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-dynamic-import-node/lib/index.js",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
               ],
@@ -321,7 +321,7 @@ exports[`plugin-babel > should adjust browserslist when target is node 1`] = `
 }
 `;
 
-exports[`plugin-babel > should apply exclude condition when using source.exclude 1`] = `
+exports[`plugin-babel webpack mode > should apply exclude condition when using source.exclude 1`] = `
 {
   "module": {
     "rules": [
@@ -342,7 +342,7 @@ exports[`plugin-babel > should apply exclude condition when using source.exclude
         "test": /\\\\\\.\\(js\\|mjs\\|cjs\\|jsx\\)\\$\\|\\\\\\.\\(ts\\|mts\\|cts\\|tsx\\)\\$/,
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -371,7 +371,7 @@ exports[`plugin-babel > should apply exclude condition when using source.exclude
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
               ],
@@ -421,7 +421,7 @@ exports[`plugin-babel > should apply exclude condition when using source.exclude
         },
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -450,7 +450,7 @@ exports[`plugin-babel > should apply exclude condition when using source.exclude
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
               ],
@@ -496,7 +496,7 @@ exports[`plugin-babel > should apply exclude condition when using source.exclude
 }
 `;
 
-exports[`plugin-babel > should not add core-js-entry when output.polyfill is usage 1`] = `
+exports[`plugin-babel webpack mode > should not add core-js-entry when output.polyfill is usage 1`] = `
 {
   "main": [
     "index.js",
@@ -504,7 +504,343 @@ exports[`plugin-babel > should not add core-js-entry when output.polyfill is usa
 }
 `;
 
-exports[`plugin-babel > should override targets of babel-preset-env when using output.overrideBrowserslist config 1`] = `
+exports[`plugin-babel webpack mode > should not have any pluginImport in Babel 1`] = `
+[
+  {
+    "include": [
+      {
+        "and": [
+          "<ROOT>",
+          {
+            "not": /\\[\\\\\\\\/\\]node_modules\\[\\\\\\\\/\\]/,
+          },
+        ],
+      },
+    ],
+    "test": /\\\\\\.\\(js\\|mjs\\|cjs\\|jsx\\)\\$\\|\\\\\\.\\(ts\\|mts\\|cts\\|tsx\\)\\$/,
+    "use": [
+      {
+        "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
+        "options": {
+          "babelrc": false,
+          "compact": false,
+          "configFile": false,
+          "plugins": [
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-decorators/lib/index.js",
+              {
+                "version": "legacy",
+              },
+            ],
+            "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-export-default-from/lib/index.js",
+            "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-partial-application/lib/index.js",
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-pipeline-operator/lib/index.js",
+              {
+                "proposal": "minimal",
+              },
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-transform-runtime/lib/index.js",
+              {
+                "useESModules": true,
+                "version": "7.23.2",
+              },
+            ],
+            "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
+              {},
+            ],
+          ],
+          "presets": [
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/preset-env/lib/index.js",
+              {
+                "bugfixes": true,
+                "corejs": {
+                  "proposals": true,
+                  "version": "3.32",
+                },
+                "exclude": [
+                  "transform-typeof-symbol",
+                ],
+                "modules": "commonjs",
+                "targets": [
+                  "chrome >= 87",
+                  "edge >= 88",
+                  "firefox >= 78",
+                  "safari >= 14",
+                ],
+                "useBuiltIns": "entry",
+              },
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/preset-typescript/lib/index.js",
+              {
+                "allExtensions": true,
+                "allowDeclareFields": true,
+                "allowNamespaces": true,
+                "isTSX": true,
+                "optimizeConstEnums": true,
+              },
+            ],
+          ],
+        },
+      },
+    ],
+  },
+  {
+    "mimetype": {
+      "or": [
+        "text/javascript",
+        "application/javascript",
+      ],
+    },
+    "use": [
+      {
+        "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
+        "options": {
+          "babelrc": false,
+          "compact": false,
+          "configFile": false,
+          "plugins": [
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-decorators/lib/index.js",
+              {
+                "version": "legacy",
+              },
+            ],
+            "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-export-default-from/lib/index.js",
+            "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-partial-application/lib/index.js",
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-pipeline-operator/lib/index.js",
+              {
+                "proposal": "minimal",
+              },
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-transform-runtime/lib/index.js",
+              {
+                "useESModules": true,
+                "version": "7.23.2",
+              },
+            ],
+            "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
+              {},
+            ],
+          ],
+          "presets": [
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/preset-env/lib/index.js",
+              {
+                "bugfixes": true,
+                "corejs": {
+                  "proposals": true,
+                  "version": "3.32",
+                },
+                "exclude": [
+                  "transform-typeof-symbol",
+                ],
+                "modules": "commonjs",
+                "targets": [
+                  "chrome >= 87",
+                  "edge >= 88",
+                  "firefox >= 78",
+                  "safari >= 14",
+                ],
+                "useBuiltIns": "entry",
+              },
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/preset-typescript/lib/index.js",
+              {
+                "allExtensions": true,
+                "allowDeclareFields": true,
+                "allowNamespaces": true,
+                "isTSX": true,
+                "optimizeConstEnums": true,
+              },
+            ],
+          ],
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`plugin-babel webpack mode > should not set default pluginImport for Babel 1`] = `
+[
+  {
+    "include": [
+      {
+        "and": [
+          "<ROOT>",
+          {
+            "not": /\\[\\\\\\\\/\\]node_modules\\[\\\\\\\\/\\]/,
+          },
+        ],
+      },
+    ],
+    "test": /\\\\\\.\\(js\\|mjs\\|cjs\\|jsx\\)\\$\\|\\\\\\.\\(ts\\|mts\\|cts\\|tsx\\)\\$/,
+    "use": [
+      {
+        "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
+        "options": {
+          "babelrc": false,
+          "compact": false,
+          "configFile": false,
+          "plugins": [
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-decorators/lib/index.js",
+              {
+                "version": "legacy",
+              },
+            ],
+            "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-export-default-from/lib/index.js",
+            "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-partial-application/lib/index.js",
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-pipeline-operator/lib/index.js",
+              {
+                "proposal": "minimal",
+              },
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-transform-runtime/lib/index.js",
+              {
+                "useESModules": true,
+                "version": "7.23.2",
+              },
+            ],
+            "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
+              {},
+            ],
+          ],
+          "presets": [
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/preset-env/lib/index.js",
+              {
+                "bugfixes": true,
+                "corejs": {
+                  "proposals": true,
+                  "version": "3.32",
+                },
+                "exclude": [
+                  "transform-typeof-symbol",
+                ],
+                "modules": "commonjs",
+                "targets": [
+                  "chrome >= 87",
+                  "edge >= 88",
+                  "firefox >= 78",
+                  "safari >= 14",
+                ],
+                "useBuiltIns": "entry",
+              },
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/preset-typescript/lib/index.js",
+              {
+                "allExtensions": true,
+                "allowDeclareFields": true,
+                "allowNamespaces": true,
+                "isTSX": true,
+                "optimizeConstEnums": true,
+              },
+            ],
+          ],
+        },
+      },
+    ],
+  },
+  {
+    "mimetype": {
+      "or": [
+        "text/javascript",
+        "application/javascript",
+      ],
+    },
+    "use": [
+      {
+        "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
+        "options": {
+          "babelrc": false,
+          "compact": false,
+          "configFile": false,
+          "plugins": [
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-decorators/lib/index.js",
+              {
+                "version": "legacy",
+              },
+            ],
+            "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-export-default-from/lib/index.js",
+            "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-partial-application/lib/index.js",
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-pipeline-operator/lib/index.js",
+              {
+                "proposal": "minimal",
+              },
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-transform-runtime/lib/index.js",
+              {
+                "useESModules": true,
+                "version": "7.23.2",
+              },
+            ],
+            "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
+              {},
+            ],
+          ],
+          "presets": [
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/preset-env/lib/index.js",
+              {
+                "bugfixes": true,
+                "corejs": {
+                  "proposals": true,
+                  "version": "3.32",
+                },
+                "exclude": [
+                  "transform-typeof-symbol",
+                ],
+                "modules": "commonjs",
+                "targets": [
+                  "chrome >= 87",
+                  "edge >= 88",
+                  "firefox >= 78",
+                  "safari >= 14",
+                ],
+                "useBuiltIns": "entry",
+              },
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/preset-typescript/lib/index.js",
+              {
+                "allExtensions": true,
+                "allowDeclareFields": true,
+                "allowNamespaces": true,
+                "isTSX": true,
+                "optimizeConstEnums": true,
+              },
+            ],
+          ],
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`plugin-babel webpack mode > should override targets of babel-preset-env when using output.overrideBrowserslist config 1`] = `
 {
   "module": {
     "rules": [
@@ -522,7 +858,7 @@ exports[`plugin-babel > should override targets of babel-preset-env when using o
         "test": /\\\\\\.\\(js\\|mjs\\|cjs\\|jsx\\)\\$\\|\\\\\\.\\(ts\\|mts\\|cts\\|tsx\\)\\$/,
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -551,7 +887,7 @@ exports[`plugin-babel > should override targets of babel-preset-env when using o
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
               ],
@@ -598,7 +934,7 @@ exports[`plugin-babel > should override targets of babel-preset-env when using o
         },
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -627,7 +963,7 @@ exports[`plugin-babel > should override targets of babel-preset-env when using o
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
               ],
@@ -670,7 +1006,7 @@ exports[`plugin-babel > should override targets of babel-preset-env when using o
 }
 `;
 
-exports[`plugin-babel > should set babel-loader 1`] = `
+exports[`plugin-babel webpack mode > should set babel-loader 1`] = `
 {
   "module": {
     "rules": [
@@ -688,7 +1024,7 @@ exports[`plugin-babel > should set babel-loader 1`] = `
         "test": /\\\\\\.\\(js\\|mjs\\|cjs\\|jsx\\)\\$\\|\\\\\\.\\(ts\\|mts\\|cts\\|tsx\\)\\$/,
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -717,7 +1053,7 @@ exports[`plugin-babel > should set babel-loader 1`] = `
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
               ],
@@ -767,7 +1103,7 @@ exports[`plugin-babel > should set babel-loader 1`] = `
         },
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -796,7 +1132,7 @@ exports[`plugin-babel > should set babel-loader 1`] = `
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
               ],
@@ -842,7 +1178,7 @@ exports[`plugin-babel > should set babel-loader 1`] = `
 }
 `;
 
-exports[`plugin-babel > should set include/exclude 1`] = `
+exports[`plugin-babel webpack mode > should set include/exclude 1`] = `
 {
   "module": {
     "rules": [
@@ -864,7 +1200,7 @@ exports[`plugin-babel > should set include/exclude 1`] = `
         "test": /\\\\\\.\\(js\\|mjs\\|cjs\\|jsx\\)\\$\\|\\\\\\.\\(ts\\|mts\\|cts\\|tsx\\)\\$/,
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -893,7 +1229,7 @@ exports[`plugin-babel > should set include/exclude 1`] = `
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
               ],
@@ -943,7 +1279,7 @@ exports[`plugin-babel > should set include/exclude 1`] = `
         },
         "use": [
           {
-            "loader": "<ROOT>/packages/shared/compiled/babel-loader",
+            "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
             "options": {
               "babelrc": false,
               "compact": false,
@@ -972,7 +1308,7 @@ exports[`plugin-babel > should set include/exclude 1`] = `
                 ],
                 "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
                 [
-                  "<ROOT>/packages/webpack/compiled/babel-plugin-lodash",
+                  "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
                   {},
                 ],
               ],
@@ -1016,4 +1352,188 @@ exports[`plugin-babel > should set include/exclude 1`] = `
     ],
   },
 }
+`;
+
+exports[`plugin-babel webpack mode > should set proper pluginImport option in Babel 1`] = `
+[
+  {
+    "include": [
+      {
+        "and": [
+          "<ROOT>",
+          {
+            "not": /\\[\\\\\\\\/\\]node_modules\\[\\\\\\\\/\\]/,
+          },
+        ],
+      },
+    ],
+    "test": /\\\\\\.\\(js\\|mjs\\|cjs\\|jsx\\)\\$\\|\\\\\\.\\(ts\\|mts\\|cts\\|tsx\\)\\$/,
+    "use": [
+      {
+        "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
+        "options": {
+          "babelrc": false,
+          "compact": false,
+          "configFile": false,
+          "plugins": [
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-decorators/lib/index.js",
+              {
+                "version": "legacy",
+              },
+            ],
+            "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-export-default-from/lib/index.js",
+            "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-partial-application/lib/index.js",
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-pipeline-operator/lib/index.js",
+              {
+                "proposal": "minimal",
+              },
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-transform-runtime/lib/index.js",
+              {
+                "useESModules": true,
+                "version": "7.23.2",
+              },
+            ],
+            "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-import/lib/index.js",
+              {
+                "camel2DashComponentName": true,
+                "libraryName": "foo",
+              },
+              "foo",
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
+              {},
+            ],
+          ],
+          "presets": [
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/preset-env/lib/index.js",
+              {
+                "bugfixes": true,
+                "corejs": {
+                  "proposals": true,
+                  "version": "3.32",
+                },
+                "exclude": [
+                  "transform-typeof-symbol",
+                ],
+                "modules": "commonjs",
+                "targets": [
+                  "chrome >= 87",
+                  "edge >= 88",
+                  "firefox >= 78",
+                  "safari >= 14",
+                ],
+                "useBuiltIns": "entry",
+              },
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/preset-typescript/lib/index.js",
+              {
+                "allExtensions": true,
+                "allowDeclareFields": true,
+                "allowNamespaces": true,
+                "isTSX": true,
+                "optimizeConstEnums": true,
+              },
+            ],
+          ],
+        },
+      },
+    ],
+  },
+  {
+    "mimetype": {
+      "or": [
+        "text/javascript",
+        "application/javascript",
+      ],
+    },
+    "use": [
+      {
+        "loader": "<ROOT>/node_modules/<PNPM_INNER>/babel-loader/lib/index.js",
+        "options": {
+          "babelrc": false,
+          "compact": false,
+          "configFile": false,
+          "plugins": [
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-decorators/lib/index.js",
+              {
+                "version": "legacy",
+              },
+            ],
+            "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-export-default-from/lib/index.js",
+            "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-partial-application/lib/index.js",
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-proposal-pipeline-operator/lib/index.js",
+              {
+                "proposal": "minimal",
+              },
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/plugin-transform-runtime/lib/index.js",
+              {
+                "useESModules": true,
+                "version": "7.23.2",
+              },
+            ],
+            "<ROOT>/packages/babel-preset/dist/pluginLockCorejsVersion",
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-import/lib/index.js",
+              {
+                "camel2DashComponentName": true,
+                "libraryName": "foo",
+              },
+              "foo",
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/babel-plugin-lodash/lib/index.js",
+              {},
+            ],
+          ],
+          "presets": [
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/preset-env/lib/index.js",
+              {
+                "bugfixes": true,
+                "corejs": {
+                  "proposals": true,
+                  "version": "3.32",
+                },
+                "exclude": [
+                  "transform-typeof-symbol",
+                ],
+                "modules": "commonjs",
+                "targets": [
+                  "chrome >= 87",
+                  "edge >= 88",
+                  "firefox >= 78",
+                  "safari >= 14",
+                ],
+                "useBuiltIns": "entry",
+              },
+            ],
+            [
+              "<ROOT>/node_modules/<PNPM_INNER>/@babel/preset-typescript/lib/index.js",
+              {
+                "allExtensions": true,
+                "allowDeclareFields": true,
+                "allowNamespaces": true,
+                "isTSX": true,
+                "optimizeConstEnums": true,
+              },
+            ],
+          ],
+        },
+      },
+    ],
+  },
+]
 `;
