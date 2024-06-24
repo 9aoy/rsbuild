@@ -110,8 +110,15 @@ export const pluginResolve = (): RsbuildPlugin => ({
 
       rspackConfig.resolve ||= {};
 
-      if (isTsProject && config.source.aliasStrategy === 'prefer-tsconfig') {
-        rspackConfig.resolve.tsConfigPath = tsconfigPath;
+      if (
+        isTsProject &&
+        tsconfigPath &&
+        config.source.aliasStrategy === 'prefer-tsconfig'
+      ) {
+        rspackConfig.resolve.tsConfig = {
+          ...(rspackConfig.resolve.tsConfig || {}),
+          configFile: tsconfigPath,
+        };
       }
     });
   },
